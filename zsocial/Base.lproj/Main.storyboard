@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign InVC3-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="SignInVC3" customModule="zsocial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePU-dU-JNM" customClass="RoundButton3" customModule="zsocial" customModuleProvider="target">
+                                <rect key="frame" x="113" y="259" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="4zG-lJ-ee4"/>
+                                    <constraint firstAttribute="height" constant="150" id="eTe-5J-C96"/>
+                                </constraints>
+                                <state key="normal" image="f"/>
+                                <connections>
+                                    <action selector="facebookButtonTapped3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i2F-KQ-Isk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ePU-dU-JNM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0Wq-p0-QZy"/>
+                            <constraint firstItem="ePU-dU-JNM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sbz-Ak-9lW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="eDZ-lL-JuJ" kind="show" identifier="goToFeed" id="5nb-fI-PcC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="24.800000000000001" y="36.431784107946029"/>
+        </scene>
+        <!--FeedVC-->
+        <scene sceneID="nA3-Ee-UKL">
+            <objects>
+                <viewController id="eDZ-lL-JuJ" customClass="FeedVC" customModule="zsocial" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mHh-t5-JLG"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jht-hC-0uM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Gy0-9d-kDr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fma-U4-Xfh">
+                                <rect key="frame" x="157" y="318" width="60" height="30"/>
+                                <state key="normal" title="Sign Out">
+                                    <color key="titleColor" red="0.25021222980000002" green="0.25021222980000002" blue="0.25021222980000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="signInTapped:" destination="eDZ-lL-JuJ" eventType="touchUpInside" id="ihM-IO-NXk"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="fma-U4-Xfh" firstAttribute="centerY" secondItem="Gy0-9d-kDr" secondAttribute="centerY" id="7e8-P8-hNn"/>
+                            <constraint firstItem="fma-U4-Xfh" firstAttribute="centerX" secondItem="Gy0-9d-kDr" secondAttribute="centerX" id="Ip7-TI-pIc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="mKv-Q0-dh6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rBs-Kq-ZcL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="911" y="36"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="f" width="352" height="328"/>
+    </resources>
+</document>
